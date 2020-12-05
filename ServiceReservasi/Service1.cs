@@ -117,7 +117,7 @@ namespace ServiceReservasi
             List<Pemesanan> pemesanan = new List<Pemesanan>(); //proses untuk mendeklarasikan nama list yang telah dibuat
             try
             {
-                string sql = "select ID_pemesanan, Nama_customer, No_telpon, Jumlah_pemesanan, Nama_lokasi from dbo.Pemesanan p join dbo.Lokasi l on p.ID_lokasi = l.ID_lokasi";
+                string sql = "select ID_reservasi, Nama_customer, No_telpon, Jumlah_pemesanan, Nama_lokasi from dbo.Pemesanan p join dbo.Lokasi l on p.ID_lokasi = l.ID_lokasi";
                 connection = new SqlConnection(constring); //fungsi koneksi ke db
                 com = new SqlCommand(sql, connection); //proses execute query
                 connection.Open(); //membuka koneksi
